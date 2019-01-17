@@ -168,11 +168,101 @@ Last updated: 01-15-2015
 ```
 
 * Use the `find` command to search for files more effectively. Search the sub-directories under `challenge_files` to find the location of the file named `modi_laboriosam.txt`. *Where is that file located?*
+
+```
+./tmp/modi_laboriosam.txt
+```
+
 * Use the `grep` command to search for text within a file. Use `grep` on all the `.user` files in `challenge_files` to find which files contain "WA" (the abbreviation for Washington state). *How many files did you find?*
+
+```
+2 files:
+Britt-Erdman.user:O'Harachester, WA 37261
+Lissie-Strosin.user:Jewessfurt, WA 00816-724
+```
+
 * Use the `-r` option of `grep` to *recursively* find the text "Waldo" hidden in a file somewhere under the `challenge_files` directory. *Paste the result showing the file and line where the word "Waldo" shows up.*
+
+```
+serial-numbers/eaque_molestiae.txt:Ut est maiores quia autem. Nisi modi Waldo sed corporis sit explicabo ut est. Et est placeat ea sunt sunt consectetur sunt incidunt. Explicabo vel esse blanditiis dolorem culpa non quia.
+```
 
 ### Pipes and Connecting Commands
 
 * Sometimes it's useful to output the results of a command to a text file for further analysis, reference, or processing. Try running `ls > files.txt`. Notice that the file `files.txt` was created. View that file using `more`. *What do you see in the `files.txt` file?*
+
+```
+01
+2015_special_stuff.demo
+Afton-Jast.user
+Aimee-Maggio.user
+Alfonso-Gottlieb.user
+Allen-Kemmer.user
+Almina-Cormier.user
+Alta-Lemke.user
+Amina-McGlynn.user
+Anabel-Hammes.user
+Ancel-Conn.user
+Anjali-Halvorson.user
+Ardath-Kuvalis.user
+Avah-Dickinson.user
+Ayaan-Stiedemann.user
+Aylin-Grant.user
+Bedford-Sipes.user
+Benita-King.user
+Benito-Stoltenberg.user
+Beverlee-Moen.user
+Brad-Thiel.user
+Brayan-Douglas.user
+Bria-Satterfield.user
+Bridgette-Reichel.user
+Britta-Hammes.user
+Britt-Erdman.user
+Bryant-Kuhic.user
+Bryton-Aufderhar.user
+Caitlin-Grady.user
+Carroll-Hartmann.user
+Claudie-McClure.user
+Clemente-Haley.user
+Cleo-VonRueden.user
+cloaked-wookie.demo
+Codie-Romaguera.user
+Cooper-Reynolds.user
+Corrie-Bogisich.user
+credit_cards2.txt
+credit_cards.txt
+Dannielle-Green.user
+Deedee-Jacobson.user
+Desiree-Marks.user
+Deven-Rutherford.user
+Doyle-Jones.user
+Dustyn-O'Connell.user
+Elza-Mraz.user
+Emory-Crona.user
+Erin-Walker.user
+Estela-Schultz.user
+Fernanda-Tromp.user
+files.txt
+Fletcher-Rice.user
+Fred-Ryan.user
+Genie-Abshire.user
+Grace-Tromp.user
+Grant-Cronin.user
+Hali-Roob.user
+Harland-Schoen.user
+Harrell-Quitzon.user
+Hillard-Ziemann.user
+
+Seems to be the titles to all the files in the challenge files subfolder.
+```
 * Notice that if you run `ls -alh` in the `challenge_files` directory, the files scroll by very quickly. Sometimes it would be better to get the results in a paginated format. Try running `ls -alh | more`. *Describe what you see when you run `ls -alh | more`.*
+
+```
+Same list of files with details but fewer returns (easier to see) and an option to see more of the list.
+```
+
 * Earlier, when you viewed the list of active processes on your devbox using `ps aux`, the list was probably really long. You can make this list more manageable by using the pipe (`|`) to filter the results of `ps` using `grep`. Run `ps aux | grep <your_username>` to see what processes are running for your specific user. *Paste the list of processes that reference your username here:*
+
+```
+cabox      555  0.0  0.4  12888  1072 pts/0    S+   02:01   0:00 grep --color=auto Shure
+```
